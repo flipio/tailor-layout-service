@@ -11,7 +11,7 @@ class HeaderServer extends Server {
         this.config.name = 'header';
         this.config.mainJS = 'header.js';
 
-        this.startServer(this.handler);
+        this.startServer();
     }
 
 }

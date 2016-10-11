@@ -4,13 +4,12 @@
 
 var Server = require('../../common/Server');
 
-class SidebarServer extends Server {
+class MainServer extends Server {
 
     constructor(config) {
         super(config);
 
-        this.config.name = 'sidebar';
-        this.config.mainJS = 'sidebar.js';
+        this.config.name = 'main';
 
         this.startServer();
 
@@ -18,4 +17,4 @@ class SidebarServer extends Server {
 
 }
 
-module.exports = SidebarServer;
+module.exports = MainServer;

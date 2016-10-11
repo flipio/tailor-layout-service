@@ -1,0 +1,20 @@
+.content {
+    display : flex;
+    display : -webkit-flex;
+    display : -ms-flexbox;
+
+    padding: 10px;
+
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    width: 100%;
+    min-height:400px;
+}
+
+.sidebar-layout {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}

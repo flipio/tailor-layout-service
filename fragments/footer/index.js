@@ -11,7 +11,7 @@ class FooterServer extends Server {
         this.config.name = 'footer';
         this.config.mainJS = 'footer.js';
 
-        this.startServer(this.handler);
+        this.startServer();
 
     }
 

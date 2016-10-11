@@ -6,5 +6,8 @@
 module.exports = {
     fragment: require('./fragment'),
     header: require('./header'),
-    footer: require('./footer')
+    footer: require('./footer'),
+    layouts: require('./layouts'),
+    main: require('./main'),
+    sidebar: require('./sidebar')
 };

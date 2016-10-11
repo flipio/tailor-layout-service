@@ -1,13 +1,13 @@
-.sidebar {
+.main-module {
     display: flex;
 
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
 
-    widht: 150px;
-    height: auto;
     min-height: 80px;
-    background: #eee;
+    background: #ccc;
+    width: 100%;
+    height: auto;
     border: 2px solid #fff;
 }

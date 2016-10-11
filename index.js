@@ -64,13 +64,10 @@ console.log('Fragment2 started at port 8082');
 /*
  * Fragment 1
  */
-const fragment3 = http.createServer(
-    Fragments.fragment('main', 'http://localhost:8083')
-);
-fragment3.listen(8083);
 
-console.log('Fragment3 started at port 8083');
-
+const mainFragment = new Fragments.main({port: 8083});
 const headerFragment = new Fragments.header({port: 8084});
 const footerFragment = new Fragments.footer({port: 8085});
+const sidebarFragment = new Fragments.sidebar({port: 8086});
+const layoutsService = new Fragments.layouts({port: 8087});
 
