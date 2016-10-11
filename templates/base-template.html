@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel=”dns-prefetch” href=”https://example.com” />
+    <script type="slot" name="head"></script>
+</head>
+<body>
+
+<div class="main">
+    <div class="header-wrapper">
+    </div>
+
+    <div class="wrapper">
+        <slot name="body-start"></slot>
+    </div>
+
+    <div class="footer-wrapper">
+        <fragment src="http://localhost:8085"></fragment>
+    </div>
+
+</div>
+
+</body>
+</html>
