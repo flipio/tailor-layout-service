@@ -4,14 +4,16 @@
 var Server = require('../../common/Server');
 
 class HeaderServer extends Server {
+
     constructor(config) {
         super(config);
+
+        this.config.name = 'header';
+        this.config.mainJS = 'header.js';
 
         this.startServer(this.handler);
     }
 
-    handler() {
-
-    }
 }
+
 module.exports = HeaderServer;

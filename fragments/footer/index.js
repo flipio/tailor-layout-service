@@ -6,8 +6,8 @@ var Server = require('../../common/Server');
 class FooterServer extends Server {
 
     constructor(config) {
-
         super(config);
+
         this.config.name = 'footer';
         this.config.mainJS = 'footer.js';
 
@@ -16,4 +16,5 @@ class FooterServer extends Server {
     }
 
 }
+
 module.exports = FooterServer;

@@ -71,11 +71,6 @@ fragment3.listen(8083);
 
 console.log('Fragment3 started at port 8083');
 
-const headerFragment = http.createServer(
-    Fragments.header('header', 'http://localhost:8084')
-);
-
-headerFragment.listen(8084);
-
+const headerFragment = new Fragments.header({port: 8084});
 const footerFragment = new Fragments.footer({port: 8085});
 

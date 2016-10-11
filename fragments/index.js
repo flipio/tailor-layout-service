@@ -5,6 +5,6 @@
 
 module.exports = {
     fragment: require('./fragment'),
-    header: require('./fragment'),
+    header: require('./header'),
     footer: require('./footer')
 };
