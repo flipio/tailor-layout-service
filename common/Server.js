@@ -28,6 +28,9 @@ class Server {
     }
 
     startServer() {
+
+        console.log('Starting fragment:\t%s\t\ton address:\t%s ', this.config.name, this.config.url);
+
         this.server = http.createServer(this.handler.bind(this));
         this.server.listen(this.config.port);
     }
