@@ -4,7 +4,10 @@ const path = require('path');
 const Tailor = require('node-tailor');
 const fetchTemplateFs = require('node-tailor/lib/fetch-template');
 const Fragments = require('./fragments');
-const baseTemplateFn = () => 'base-template';
+const baseTemplateFn = () => {
+
+    return 'base-template';
+};
 
 const tailor = new Tailor({
     fetchTemplate: fetchTemplateFs(path.join(__dirname, 'templates'), baseTemplateFn)
