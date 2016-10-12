@@ -55,6 +55,9 @@ class Server {
             case 'js':
                 _contentType = 'application/javascript';
                 break;
+            default:
+                _contentType = 'text/html';
+                break;
         }
 
         return _contentType;
@@ -73,10 +76,14 @@ class Server {
             : `${__dirname}/../fragments${request.url}`;
 
         fs.readFile(_url, (err, content) => {
+
+            let _linkHeaders = [
+                `<${config.url}/${config.name}/css/${config.mainCSS}>; rel="stylesheet",`,
+                `<${config.url}/${config.name}/js/${config.mainJS}>; rel="fragment-script"`
+            ];
+
             let _headers = {
-                'Link': `<${config.url}/${config.name}/css/${config.mainCSS}>; rel="stylesheet",` +
-                `<${config.url}/${config.name}/js/${config.mainJS}>; rel="fragment-script"`,
-                'Content-Type': 'text/html'
+                'Content-Type': this._getContentType(this._getFileType(pathname))
             };
 
             if (err) {
@@ -84,14 +91,10 @@ class Server {
             } else {
 
                 if (isMainHtml) {
-                    response.writeHead(200, _headers);
-                } else {
-                    response.writeHead(200, {
-                        'Content-type': this._getContentType(this._getFileType(pathname))
-                    });
+                    _headers['Link'] = _linkHeaders.join('');
                 }
 
-
+                response.writeHead(200, _headers);
                 response.end(content);
             }
         });
