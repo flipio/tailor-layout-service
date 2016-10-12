@@ -12,13 +12,10 @@ const tailor = new Tailor({
 
 const server = http.createServer((req, res) => {
 
-    console.log(req.url);
     if (req.url === '/favicon.ico') {
         res.writeHead(200, {'Content-Type': 'image/x-icon'} );
         return res.end('');
     }
-
-    console.log(req.url);
 
     var response;
 
