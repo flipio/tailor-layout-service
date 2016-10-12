@@ -38,30 +38,6 @@ server.listen(8080);
 
 console.log('Tailor started at port 8080.');
 
-/*
- * Fragment 1
- */
-const fragment1 = http.createServer(
-    Fragments.fragment('hello', 'http://localhost:8081')
-);
-fragment1.listen(8081);
-
-console.log('Fragment1 started at port 8081');
-
-/*
- * Fragment 2
- */
-const fragment2 = http.createServer(
-    Fragments.fragment('world', 'http://localhost:8082')
-);
-fragment2.listen(8082);
-
-console.log('Fragment2 started at port 8082');
-
-/*
- * Fragment 1
- */
-
 const mainFragment = new Fragments.main({port: 8083});
 const headerFragment = new Fragments.header({port: 8084});
 const footerFragment = new Fragments.footer({port: 8085});

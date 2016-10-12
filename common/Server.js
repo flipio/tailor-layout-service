@@ -10,17 +10,21 @@ class Server {
 
     constructor(config) {
 
-        this.config = {
-            mainCSS: 'main.css',
-            mainJS: 'main.js',
-            mainHTML: 'index.html'
-        };
-
         config = config || {};
         config.port = config.port || 8081;
 
-        this.config = _.extend(this.config, config);
-        this.config.url = `http://localhost:${this.config.port}`;
+        this.config = Object.assign({
+
+            mainCSS: 'main.css',
+            mainJS: 'main.js',
+            mainHTML: 'index.html',
+
+            host: 'http://localhost',
+            port: 8081
+
+        }, config);
+
+        this.config.url = `${this.config.host}:${this.config.port}`;
     }
 
     startServer() {
