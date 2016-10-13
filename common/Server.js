@@ -69,14 +69,14 @@ class Server {
         var isMainHtml = pathname === '/' || pathname === 'index.html';
 
         var _url = isMainHtml ?
-            `${__dirname}/../fragments/${name}/${config.mainHTML}`
+            `${__dirname}/../fragments/${name}/src/${config.mainHTML}`
             : `${__dirname}/../fragments${request.url}`;
 
         fs.readFile(_url, (err, content) => {
 
             let _linkHeaders = [
-                `<${config.url}/${config.name}/css/${config.mainCSS}>; rel="stylesheet",`,
-                `<${config.url}/${config.name}/js/${config.mainJS}>; rel="fragment-script"`
+                // `<${config.url}/${config.name}/css/${config.mainCSS}>; rel="stylesheet",`,
+                `<${config.staticUrl}/${config.mainJS}>; rel="fragment-script"`
             ];
 
             let _headers = {

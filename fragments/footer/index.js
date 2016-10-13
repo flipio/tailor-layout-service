@@ -9,7 +9,8 @@ class FooterServer extends Server {
         super(config);
 
         this.config.name = 'footer';
-        this.config.mainJS = 'footer.js';
+        this.config.staticUrl = 'http://localhost:8080';
+        this.config.mainJS = 'app.js';
 
         this.startServer();
 
