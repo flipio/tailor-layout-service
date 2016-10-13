@@ -1,6 +1,9 @@
-/**
- * Created by filip on 10/11/16.
- */
-define([], function () {
-   console.log('footer is here.');
-});
+import React from 'react';
+
+const Footer = () => {
+    return (
+        <div>Hello world</div>
+    );
+};
+
+export default Footer;

@@ -37,9 +37,9 @@ const server = http.createServer((req, res) => {
     return response;
 });
 
-server.listen(8080);
+server.listen(8000);
 
-console.log('Tailor started at port 8080.');
+console.log('Tailor started at port 8000.');
 
 const mainFragment = new Fragments.main({port: 8083});
 const headerFragment = new Fragments.header({port: 8084});
